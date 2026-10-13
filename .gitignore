@@ -1,0 +1,40 @@
+# OS metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Installed dependencies and generated builds
+node_modules/
+dist/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Test output and generated visual QA captures
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+/acc-setup-web/tests/screenshots/
+
+# Local research/export workspace (kept locally, not required by the web app)
+/work/
+/outputs/
+
+# Local configuration and personal backups
+.env
+.env.*
+!.env.example
+!.env.sample
+acc-setup-backup-*.json
+acc-backup-*.json
+
+# Logs and editor temporary files
+*.log
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+*~

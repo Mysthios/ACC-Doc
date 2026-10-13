@@ -1,0 +1,39 @@
+{
+  "name": "acc-setup-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "prepare:data": "node scripts/prepare-data.mjs",
+    "predev": "npm run prepare:data",
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "prebuild": "npm run prepare:data",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "check": "npm run typecheck && npm test && npm run build && npm run test:e2e",
+    "format": "prettier --write src scripts tests/*.ts tests/e2e *.ts *.json *.md index.html .vscode",
+    "format:check": "prettier --check src scripts tests/*.ts tests/e2e *.ts *.json *.md index.html .vscode"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "prettier": "3.9.9",
+    "typescript": "7.0.2",
+    "vite": "8.3.2",
+    "vitest": "5.0.3"
+  }
+}
